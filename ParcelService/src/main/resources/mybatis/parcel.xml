@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="parcel">
+
+	
+	
+	<select id="list" resultType="Parcel">
+		SELECT *
+		FROM parcel
+	</select>
+
+	<delete id="delete">
+		DELETE
+		FROM parcel
+		WHERE id=#{id}
+	</delete>
+
+	<insert id="add">
+		INSERT INTO parcel
+		(title,order_date,price,p_number,ship_date,address,member_id,sender_id,product_id)
+		VALUES(#{title}, #{order_date}, #{ship_date}, #{address})
+	</insert>
+	<update id="update">
+		UPDATE parcel SET title=#{title}, address=#{address},
+		price=#{price}
+		WHERE id=#{id}
+	</update>
+	<select id="item" resultType="Parcel">
+		SELECT *
+		FROM parcel
+		WHERE id=#{id}
+	</select>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>	<!-- 언더스코어 표기를 카멜표기로 바꿔줌 -->
+	</settings>
+	<typeAliases>
+		<typeAlias type="kr.ac.kopo.parcelservice.model.Parcel" alias="Parcel" />
+		<typeAlias type="kr.ac.kopo.parcelservice.model.Member" alias="Member" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="mybatis/parcel.xml" />
+		<mapper resource="mybatis/member.xml" />
+	</mappers>
+</configuration>
