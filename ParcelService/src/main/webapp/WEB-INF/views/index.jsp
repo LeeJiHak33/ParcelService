@@ -9,7 +9,7 @@
 <title>택배 서비스</title>
 </head>
 <body>
-	<h1><a href="/parcelservice/">택배 배송 조회</a></h1>
+	<h1><a href="/">택배 배송 조회</a></h1>
 	<div>
 		<label>운송장 번호를 입력하세요</label> <input type="text" name="id">
 		<a href="parcel/list"><button type="button">검색</button></a>
