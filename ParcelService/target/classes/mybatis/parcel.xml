@@ -23,8 +23,8 @@
 		VALUES(#{title}, #{order_date}, #{ship_date}, #{address})
 	</insert>
 	<update id="update">
-		UPDATE parcel SET title=#{title}, address=#{address},
-		price=#{price}
+		UPDATE parcel 
+		SET title=#{title}, address=#{address}, price=#{price}
 		WHERE id=#{id}
 	</update>
 	<select id="item" resultType="Parcel">

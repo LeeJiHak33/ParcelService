@@ -9,16 +9,35 @@
 <title>택배 서비스</title>
 </head>
 <body>
-	<h1><a href="/">택배 배송 조회</a></h1>
+	<h1>
+		<a href="/">택배 배송 조회</a>
+	</h1>
 	<div>
-		<label>운송장 번호를 입력하세요</label> <input type="text" name="id">
-		<a href="parcel/list"><button type="button">검색</button></a>
+		<label>운송장 번호를 입력하세요</label> <input type="text" name="id"> <a
+			href="parcel/list"><button type="button">검색</button></a>
 	</div>
+
+	<c:if test="${sessionScope.member == null}">
+		<div>
+			<a href="login"><button type="button">로그인</button></a>
+		</div>
+	</c:if>
+
+	<c:if test="${sessionScope.member != null}">
+		<div>
+			<div>환영합니다. ${sessionScope.member.name}님</div>
+		</div>
+		<div>
+			<a href="logout"><button type="button">로그아웃</button></a>
+		</div>
+	</c:if>
+
 	<div>
-		<a href="login">로그인</a>
+		<a href="signup"><button type="button">회원가입</button></a>
 	</div>
-	<div>
-		<a href="signup">회원가입</a>
-	</div>
+	
+	<ul>
+		<li><a href="product/list">상품목록</a></li>
+	</ul>
 </body>
 </html>

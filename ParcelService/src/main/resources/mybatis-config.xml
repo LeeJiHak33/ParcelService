@@ -8,9 +8,11 @@
 	<typeAliases>
 		<typeAlias type="kr.ac.kopo.parcelservice.model.Parcel" alias="Parcel" />
 		<typeAlias type="kr.ac.kopo.parcelservice.model.Member" alias="Member" />
+		<typeAlias type="kr.ac.kopo.parcelservice.model.Product" alias="Product" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/parcel.xml" />
 		<mapper resource="mybatis/member.xml" />
+		<mapper resource="mybatis/product.xml" />
 	</mappers>
 </configuration>
