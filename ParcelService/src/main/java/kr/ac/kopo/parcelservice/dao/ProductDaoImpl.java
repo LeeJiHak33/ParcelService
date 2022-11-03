@@ -38,7 +38,7 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public void add(Product item) {
-		sql.insert("produtc.add", item);
+		sql.insert("product.add", item);
 
 	}
 

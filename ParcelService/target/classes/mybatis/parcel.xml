@@ -19,12 +19,12 @@
 
 	<insert id="add">
 		INSERT INTO parcel
-		(title,order_date,price,p_number,ship_date,address,member_id,sender_id,product_id)
-		VALUES(#{title}, #{order_date}, #{ship_date}, #{address})
+		(title,order_date,price,p_number,ship_date,ship_address,member_id,sender_id,product_id)
+		VALUES(#{id}, #{title}, #{orderDate}, #{price}, #{pNumber}, #{shipDate}, #{shipAddress}, #{memberId}, #{senderId}, #{productId})
 	</insert>
 	<update id="update">
 		UPDATE parcel 
-		SET title=#{title}, address=#{address}, price=#{price}
+		SET title=#{title}, ship_address=#{shipAddress}, price=#{price}
 		WHERE id=#{id}
 	</update>
 	<select id="item" resultType="Parcel">

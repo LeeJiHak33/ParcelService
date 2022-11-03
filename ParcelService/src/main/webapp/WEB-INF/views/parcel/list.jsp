@@ -7,12 +7,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>배송리스트</title>
 </head>
 <body>
 	<div>
 		<div>
-			<h1>배송 목록</h1>
+			<h1>
+				<a href="/">택배 배송 조회</a>
+			</h1>
+		</div>
+		<div>
+			<h2>배송 목록</h2>
 		</div>
 		<div>
 			<table border="1">
@@ -43,7 +49,10 @@
 							<td>${item.price}</td>
 							<td>${item.pNumber}</td>
 							<td>${item.shipDate}</td>
-							<td>${item.address}</td>
+							<td>${item.shipAddress}</td>
+							<td>${item.memberId}</td>
+							<td>${item.senderId}</td>
+							<td>${item.productId}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -51,10 +60,7 @@
 		</div>
 		<div>
 			<div>
-				<a href="add">추가</a>
-			</div>
-			<div>
-				<a href="../">처음으로</a>
+				<a href="add"><button>추가</button></a>
 			</div>
 		</div>
 	</div>
