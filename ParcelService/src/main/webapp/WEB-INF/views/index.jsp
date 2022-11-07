@@ -46,6 +46,6 @@
 		<label>운송장 번호를 입력하세요</label> <input type="text" name="id"> <a
 			href="parcel/list"><button type="button">검색</button></a>
 	</div>
-		<a href="product/list"><button type="button">상품목록</button></a>		
+		<a href="product/list"><button type="button">상품목록</button></a>	 <a href="sender/list"><button type="button">발송자목록</button></a>	
 </body>
 </html>

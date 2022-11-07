@@ -9,40 +9,33 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.ac.kopo.parcelservice.model.Parcel;
-import kr.ac.kopo.parcelservice.service.ParcelService;
+import kr.ac.kopo.parcelservice.model.Sender;
+import kr.ac.kopo.parcelservice.service.SenderService;
 
 @Controller
-@RequestMapping("/parcel")
-public class ParcelController {
-	final String path = "parcel/";
+@RequestMapping("/sender")
+public class SenderController {
+	final String path = "sender/";
 
 	@Autowired
-	ParcelService service;
+	SenderService service;
 
 	@RequestMapping("/list")
 	public String list(Model model) {
-		List<Parcel> list = service.list();
+		List<Sender> list = service.list();
 
 		model.addAttribute("list", list);
 
 		return path + "list";
 	}
 
-	@RequestMapping("/delete")
-	public String delete(int id) {
-		service.delete(id);
-
-		return "redirect:list";
-	}
-	
 	@GetMapping("/add")
 	public String add(Model model) {
 		return path + "add";
 	}
 	
 	@PostMapping("/add")
-	public String add(Parcel item) {
+	public String add(Sender item) {
 		service.add(item);
 		
 		return "redirect:list";
@@ -50,7 +43,7 @@ public class ParcelController {
 	
 	@GetMapping("/update")
 	public String update(int id, Model model) {
-		Parcel item = service.item(id);
+		Sender item = service.item(id);
 		
 		model.addAttribute("item", item);
 		
@@ -58,10 +51,16 @@ public class ParcelController {
 	}
 	
 	@PostMapping("/update")
-	public String update(Parcel item) {
+	public String update(Sender item) {
 		service.update(item);
 		
 		return "redirect:list";
 	}
+	
+	@RequestMapping("/delete")
+	public String delete(int id) {
+		service.delete(id);
 
+		return "redirect:list";
+	}
 }

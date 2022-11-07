@@ -4,8 +4,8 @@
 
 <mapper namespace="parcel">
 
-	
-	
+
+
 	<select id="list" resultType="Parcel">
 		SELECT *
 		FROM parcel
@@ -20,11 +20,15 @@
 	<insert id="add">
 		INSERT INTO parcel
 		(title,order_date,price,p_number,ship_date,ship_address,member_id,sender_id,product_id)
-		VALUES(#{id}, #{title}, #{orderDate}, #{price}, #{pNumber}, #{shipDate}, #{shipAddress}, #{memberId}, #{senderId}, #{productId})
+		VALUES(#{id}, #{title}, #{orderDate}, #{price}, #{pNumber},
+		#{shipDate}, #{shipAddress}, #{memberId}, #{senderId}, #{productId})
 	</insert>
 	<update id="update">
-		UPDATE parcel 
-		SET title=#{title}, ship_address=#{shipAddress}, price=#{price}
+		UPDATE parcel
+		SET id=#{id}, title=#{title}, order_date=#{orderDate}, price=#{price},
+		p_number=#{pNumber}, ship_date=#{shipDate},
+		ship_address=#{shipAddress}, member_id=#{memberId},
+		sender_id=#{senderId}, product_id=#{productId}
 		WHERE id=#{id}
 	</update>
 	<select id="item" resultType="Parcel">
