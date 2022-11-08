@@ -31,6 +31,10 @@
 						<th>전화번호</th>
 						<th>발송일자</th>
 						<th>주소</th>
+						<th>받는사람</th>
+						<th>보내는사람</th>
+						<th>상품번호</th>
+						<th>관리</th>
 					</tr>
 				</thead>
 
@@ -45,14 +49,16 @@
 						<tr>
 							<td>${item.id}</td>
 							<td>${item.title}</td>
-							<td>${item.orderDate}</td>
+							<td><fmt:formatDate value="${item.orderDate}" pattern="yyyy년 MM월 dd일 "/></td>
 							<td>${item.price}</td>
 							<td>${item.pNumber}</td>
-							<td>${item.shipDate}</td>
-							<td>${item.shipAddress}</td>
+							<td><fmt:formatDate value="${item.shipDate}" pattern="yyyy년 MM월 dd일 "/></td>
+							<td>${item.address}</td>
 							<td>${item.memberId}</td>
 							<td>${item.senderId}</td>
 							<td>${item.productId}</td>
+							<td><a href="delete/${item.id}"><button
+					type="button">제거</button></a><a href="update/${item.id}"><button type="button">변경</button></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

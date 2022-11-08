@@ -10,10 +10,10 @@ public interface SenderDao {
 
 	void add(Sender item);
 
-	Sender item(int id);
+	Sender item(String id);
 
 	void update(Sender item);
 
-	void delete(int id);
+	void delete(String id);
 
 }

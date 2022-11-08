@@ -26,7 +26,7 @@ public class SenderDaoImpl implements SenderDao {
 	}
 
 	@Override
-	public Sender item(int id) {
+	public Sender item(String id) {
 		return sql.selectOne("sender.item", id);
 	}
 
@@ -36,7 +36,7 @@ public class SenderDaoImpl implements SenderDao {
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(String id) {
 		sql.delete("sender.delete", id);
 
 	}

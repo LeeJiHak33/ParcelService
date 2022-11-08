@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -41,8 +42,8 @@ public class SenderController {
 		return "redirect:list";
 	}
 	
-	@GetMapping("/update")
-	public String update(int id, Model model) {
+	@GetMapping("/update/{id}")
+	public String update(@PathVariable String id, Model model) {
 		Sender item = service.item(id);
 		
 		model.addAttribute("item", item);
@@ -50,17 +51,18 @@ public class SenderController {
 		return path + "update";
 	}
 	
-	@PostMapping("/update")
-	public String update(Sender item) {
+	@PostMapping("/update/{id}")
+	public String update(@PathVariable String id, Sender item) {
+		item.setId(id);
 		service.update(item);
-		
-		return "redirect:list";
+	
+		return "redirect:../list";
 	}
 	
-	@RequestMapping("/delete")
-	public String delete(int id) {
+	@RequestMapping("/delete/{id}")
+	public String delete(@PathVariable String id) {
 		service.delete(id);
 
-		return "redirect:list";
+		return "redirect:../list";
 	}
 }

@@ -26,7 +26,7 @@ public class SenderServiceImpl implements SenderService {
 	}
 
 	@Override
-	public Sender item(int id) {
+	public Sender item(String id) {
 		return dao.item(id);
 	}
 
@@ -37,7 +37,7 @@ public class SenderServiceImpl implements SenderService {
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(String id) {
 		dao.delete(id);
 
 	}

@@ -1,20 +1,24 @@
 package kr.ac.kopo.parcelservice.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 public class Parcel {
 	private int id;
 	private String title;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date orderDate;
 	private int price;
 	private String pNumber;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date shipDate;
 	private String address;
 	private String memberId;
 	private String senderId;
 	private int productId;
-	private String name;
 
 	public int getId() {
 		return id;
@@ -32,6 +36,12 @@ public class Parcel {
 		this.title = title;
 	}
 
+	public String getOrderDateFormat() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+		return sdf.format(orderDate);
+	}
+	
 	public Date getOrderDate() {
 		return orderDate;
 	}
@@ -54,6 +64,12 @@ public class Parcel {
 
 	public void setpNumber(String pNumber) {
 		this.pNumber = pNumber;
+	}
+	
+	public String getShipDateFormat() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+		return sdf.format(shipDate);
 	}
 
 	public Date getShipDate() {
@@ -96,11 +112,4 @@ public class Parcel {
 		this.productId = productId;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 }
