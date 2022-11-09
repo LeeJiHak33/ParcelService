@@ -1,6 +1,5 @@
 package kr.ac.kopo.parcelservice.controller;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,11 +20,10 @@ public class ParcelController {
 	@Autowired
 	ParcelService service;
 
-	@RequestMapping("/list")
-	public String list(Model model) {
-		List<Parcel> list = service.list();
-
-		model.addAttribute("list", list);
+	@GetMapping("/list")
+	public String list(int id, Model model) {
+		Parcel item= service.list(id);
+		model.addAttribute("item", item);
 
 		return path + "list";
 	}

@@ -1,7 +1,5 @@
 package kr.ac.kopo.parcelservice.dao;
 
-import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -21,8 +19,8 @@ public class ParcelDaoImpl implements ParcelDao {
 	}
 
 	@Override
-	public List<Parcel> list() {
-		return sql.selectList("parcel.list");
+	public Parcel list(int id) {
+		return sql.selectOne("parcel.list", id);
 	}
 
 	@Override

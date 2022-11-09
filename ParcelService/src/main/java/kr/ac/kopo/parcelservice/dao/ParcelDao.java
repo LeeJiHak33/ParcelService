@@ -1,11 +1,9 @@
 package kr.ac.kopo.parcelservice.dao;
 
-import java.util.List;
-
 import kr.ac.kopo.parcelservice.model.Parcel;
 
 public interface ParcelDao {
-	List<Parcel> list();
+	Parcel list(int id);
 
 	void add(Parcel item);
 	

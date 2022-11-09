@@ -31,21 +31,21 @@
 						<th>전화번호</th>
 						<th>발송일자</th>
 						<th>주소</th>
-						<th>받는사람</th>
-						<th>보내는사람</th>
+						<th>받는사람아이디</th>
+						<th>보내는사람아이디</th>
 						<th>상품번호</th>
 						<th>관리</th>
 					</tr>
 				</thead>
 
 				<tbody>
-					<c:if test="${list.size() < 1}">
+					<c:if test="${item==null}">
 						<tr>
 							<td>조회할 수 없는 상품입니다 운송장 번호를 다시 확인해 주세요</td>
 						</tr>
 					</c:if>
 
-					<c:forEach var="item" items="${list}">
+					
 						<tr>
 							<td>${item.id}</td>
 							<td>${item.title}</td>
@@ -60,7 +60,7 @@
 							<td><a href="delete/${item.id}"><button
 					type="button">제거</button></a><a href="update/${item.id}"><button type="button">변경</button></a></td>
 						</tr>
-					</c:forEach>
+					
 				</tbody>
 			</table>
 		</div>

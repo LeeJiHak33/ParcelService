@@ -9,6 +9,7 @@
 	<select id="list" resultType="Parcel">
 		SELECT *
 		FROM parcel
+		WHERE id=#{id}
 	</select>
 
 	<delete id="delete">

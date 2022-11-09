@@ -12,40 +12,53 @@
 .logo {
 	text-align: left;
 }
+
 .login {
-	position:relative;
-	top:-50px;
-	padding-bottom:50px;
+	position: relative;
+	top: -50px;
+	padding-bottom: 50px;
 	text-align: right;
 }
+
 .center {
-	clear:both;
+	clear: both;
 	text-align: center;
 }
 </style>
+
 </head>
-<body>	
-		<h1 class="logo">
-			<a href="/">택배 배송 조회</a>
-		</h1>
-		<div class="login">		
-			<c:if test="${sessionScope.member == null}">
+<body>
+	<h1 class="logo">
+		<a href="/">택배 배송 조회</a>
+	</h1>
+	<div class="login">
+		<c:if test="${sessionScope.member == null}">
+			<div>
+				<a href="login"><button type="button">로그인</button></a><a
+					href="signup"><button type="button">회원가입</button></a>
+			</div>
+		</c:if>
+		<c:if test="${sessionScope.member != null}">
+			<div>
 				<div>
-					<a href="login"><button type="button">로그인</button></a><a
-						href="signup"><button type="button">회원가입</button></a>
+					어서오세요 ${sessionScope.member.name}님 <a href="logout"><button
+							type="button">로그아웃</button></a>
 				</div>
-			</c:if>
-			<c:if test="${sessionScope.member != null}">
-				<div>
-					<div>어서오세요 ${sessionScope.member.name}님 <a href="logout"><button type="button">로그아웃</button></a></div>
-				</div>
-			</c:if>
-		</div>
+			</div>
+		</c:if>
+	</div>
 
 	<div class="center">
-		<label>운송장 번호를 입력하세요</label> <input type="text" name="id"> <a
-			href="parcel/list"><button type="button">검색</button></a>
+		<form action="parcel/list" class="id_form">
+			<label>운송장 번호를 입력하세요</label> <input type="number" name="id"
+				style="width: 230px" maxlength="10"
+				placeholder="'-'를 제외한 10자리를 입력해 주세요"> <a href="parcel/list"><button>검색</button></a>
+		</form>
 	</div>
-		<a href="product/list"><button type="button">상품목록</button></a>	 <a href="sender/list"><button type="button">발송자목록</button></a> <a href="parcel/list"><button type="button">배송 목록</button></a>		
+	<div>
+		<a href="product/list"><button type="button">상품목록</button></a> 
+		<a href="sender/list"><button type="button">발송자목록</button></a> 
+		<a href="parcel/list"><button type="button">배송 목록</button></a>
+	</div>
 </body>
 </html>

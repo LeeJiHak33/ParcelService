@@ -1,7 +1,5 @@
 package kr.ac.kopo.parcelservice.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +18,8 @@ public class ParcelServiceImpl implements ParcelService {
 	}
 
 	@Override
-	public List<Parcel> list() {
-		return dao.list();
+	public Parcel list(int id) {
+		return dao.list(id);
 	}
 
 	@Override
