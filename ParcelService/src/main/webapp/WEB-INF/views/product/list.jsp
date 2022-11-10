@@ -25,7 +25,7 @@
 					<th>상품번호</th>
 					<th>상품명</th>
 					<th>가격</th>
-					<th>배급사</th>
+					<th>회사</th>
 					<th>관리</th>
 				</tr>
 			</thead>

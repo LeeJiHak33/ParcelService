@@ -18,7 +18,7 @@
 			</h1>
 		</div>
 		<div>
-			<h2>배송 목록</h2>
+			<h2>배송 조회</h2>
 		</div>
 		<div>
 			<table border="1">

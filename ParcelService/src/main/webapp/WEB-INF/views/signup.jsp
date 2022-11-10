@@ -11,7 +11,7 @@
 
 	function checkId(mode) {
 		if (document.signup_form.id.value == "") {
-			alert("중복검사 전에 아이디를 입력 해 주세요");
+			alert("중복검사 전에 아이디를 입력 하세요");
 			return;
 		}
 		if (mode)
@@ -96,7 +96,7 @@
 				<div>
 					<label>아이디:</label> <input type="text" name="id"
 						placeholder="아이디를 입력해 주세요">
-					<button type="button" onclick="checkId(true)">중복확인</button>
+					<button type="button" onclick="checkId(true)">중복체크</button>
 				</div>
 				<div>
 					<label>비밀번호:</label> <input type="password" name="passwd" placeholder="비밀번호를 입력해 주세요">
