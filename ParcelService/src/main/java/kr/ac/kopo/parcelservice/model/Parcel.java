@@ -18,7 +18,6 @@ public class Parcel {
 	private String address;
 	private String memberId;
 	private String senderId;
-	private int productId;
 
 	public int getId() {
 		return id;
@@ -102,14 +101,6 @@ public class Parcel {
 
 	public void setSenderId(String senderId) {
 		this.senderId = senderId;
-	}
-
-	public int getProductId() {
-		return productId;
-	}
-
-	public void setProductId(int productId) {
-		this.productId = productId;
 	}
 
 }

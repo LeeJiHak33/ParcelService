@@ -57,8 +57,20 @@
 	</div>
 	<div>
 		<a href="product/list"><button type="button">상품목록</button></a> 
-		<a href="sender/list"><button type="button">발송자목록</button></a> 
-		<a href="parcel/list"><button type="button">배송 목록</button></a>
+		<a href="sender/list"><button type="button">발송자목록</button></a> 		
+	</div>
+	<div>
+		<h2>공지사항</h2>
+		<ul>
+			<li><a href="notice/detail/1">배송 지연 안내
+			<span>
+			22년 11월 22일
+			</span>
+			</a>				
+			</li>
+			
+		</ul>
+		<a href="notice/list"><button type="button">전체보기</button></a>
 	</div>
 </body>
 </html>

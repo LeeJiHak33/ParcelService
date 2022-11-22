@@ -10,7 +10,7 @@
 	
 	<insert id="add">
 		INSERT INTO product
-		VALUES(#{id}, #{title}, #{price}, #{publisher})
+		VALUES(#{id}, #{title}, #{price}, #{publisher}, #{parcelId})
 	</insert>
 	
 	<select id="list" resultType="Product">
@@ -20,7 +20,7 @@
 	
 	<update id="update">
 		UPDATE product
-		SET id=#{id}, title=#{title}, price=#{price}, publisher=#{publisher}
+		SET id=#{id}, title=#{title}, price=#{price}, publisher=#{publisher}, parcel_id=#{parcelId}
 		WHERE id=#{id}
 	</update>
 	

@@ -21,14 +21,14 @@
 	<insert id="add">
 		INSERT INTO parcel
 		VALUES(#{id}, #{title}, #{orderDate}, #{price}, #{pNumber},
-		#{shipDate}, #{address}, #{memberId}, #{senderId}, #{productId})
+		#{shipDate}, #{address}, #{memberId}, #{senderId})
 	</insert>
 	<update id="update">
 		UPDATE parcel
 		SET id=#{id}, title=#{title}, order_date=#{orderDate}, price=#{price},
 		p_number=#{pNumber}, ship_date=#{shipDate},
 		address=#{address}, member_id=#{memberId},
-		sender_id=#{senderId}, product_id=#{productId}
+		sender_id=#{senderId}
 		WHERE id=#{id}
 	</update>
 	<select id="item" resultType="Parcel">

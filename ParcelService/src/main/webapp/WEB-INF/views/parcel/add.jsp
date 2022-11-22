@@ -45,10 +45,6 @@
 					<label>보내는 사람</label> <input type="text" name="senderId">
 				</div>
 				<div>
-					<label>상품 번호</label> <input type="number" name="productId">
-				</div>
-
-				<div>
 					<button>등록</button>
 					<a href="list"><button type="button">취소</button></a>
 				</div>

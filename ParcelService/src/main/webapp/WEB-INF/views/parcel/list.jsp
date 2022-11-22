@@ -33,7 +33,6 @@
 						<th>주소</th>
 						<th>받는사람아이디</th>
 						<th>보내는사람아이디</th>
-						<th>상품번호</th>
 						<th>관리</th>
 					</tr>
 				</thead>
@@ -56,7 +55,6 @@
 							<td>${item.address}</td>
 							<td>${item.memberId}</td>
 							<td>${item.senderId}</td>
-							<td>${item.productId}</td>
 							<td><a href="delete/${item.id}"><button
 					type="button">제거</button></a><a href="update/${item.id}"><button type="button">변경</button></a></td>
 						</tr>

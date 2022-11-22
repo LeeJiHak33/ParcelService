@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>상품 정보</title>
+<title>공지사항</title>
 </head>
 <body>
 	<div>
@@ -16,34 +16,32 @@
 		</h1>
 	</div>
 	<div>
-		<h2>상품 정보</h2>
+		<h2>공지사항</h2>
 	</div>
 	<div>
 		<table border="1">
 			<thead>
 				<tr>
-					<th>상품번호</th>
-					<th>상품명</th>
-					<th>가격</th>
-					<th>회사</th>
-					<th>운송장번호</th>
+					<th>번호</th>
+					<th>제목</th>
+					<th>등록날짜</th>
+					<th>조회수</th>
 					<th>관리</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:if test="${list.size() < 1}">
 					<tr>
-						<td>등록된 상품이 없습니다</td>
+						<td>게시글이 없습니다</td>
 					</tr>
 				</c:if>
 
 				<c:forEach var="item" items="${list}">
 					<tr>
 						<td>${item.id}</td>
-						<td>${item.title}</td>
-						<td>${item.price}</td>
-						<td>${item.publisher}</td>
-						<td>${item.parcelId}</td>
+						<td><a href="detail/${item.id}">${item.title}</a></td>
+						<td><fmt:formatDate value="${item.regDate}" pattern="yyyy년 MM월 dd일 "/></td>
+						<td>${item.view}</td>
 						<td><a href="delete/${item.id}"><button
 					type="button">제거</button></a><a href="update/${item.id}"><button type="button">변경</button></a></td>
 					</tr>

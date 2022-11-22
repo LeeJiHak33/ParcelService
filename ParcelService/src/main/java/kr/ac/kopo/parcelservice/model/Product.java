@@ -5,6 +5,15 @@ public class Product {
 	private String title;
 	private int price;
 	private String publisher;
+	private int parcelId;
+	
+	
+	public int getParcelId() {
+		return parcelId;
+	}
+	public void setParcelId(int parcelId) {
+		this.parcelId = parcelId;
+	}
 	public int getId() {
 		return id;
 	}

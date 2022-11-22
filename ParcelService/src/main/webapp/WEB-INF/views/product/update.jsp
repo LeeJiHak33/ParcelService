@@ -24,6 +24,9 @@
 			<label>회사</label> <input type="text" name="publisher" value="${item.publisher}">
 		</div>
 		<div>
+			<label>운송장번호</label> <input type="number" name="parcelId" value="${item.parcelId}">
+		</div>
+		<div>
 			<button>변경</button>
 			<a href="../list"><button type="button">취소</button></a>
 		</div>
