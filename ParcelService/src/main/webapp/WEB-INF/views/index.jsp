@@ -62,15 +62,56 @@
 	<div>
 		<h2>공지사항</h2>
 		<ul>
-			<li><a href="notice/detail/1">배송 지연 안내
+			<li><a href="notice/detail/2">배송 지연 안내
 			<span>
 			22년 11월 22일
+			</span>
+			</a>				
+			</li>
+
+			<li><a href="notice/detail/3">우천 발생으로 인한 배송 중단
+			<span>
+			22년 11월 25일
+			</span>
+			</a>				
+			</li>
+
+			<li><a href="notice/detail/4">시스템 개편으로 인한 일부 서비스 중단 안내
+			<span>
+			22년 11월 24일
 			</span>
 			</a>				
 			</li>
 			
 		</ul>
 		<a href="notice/list"><button type="button">전체보기</button></a>
+	</div>
+	<div>
+		<h2>자주 묻는 질문</h2>
+		<ul>
+			<li><a href="question/detail/1">오늘 보내면 언제 배송 되나요?
+			<span>
+			22년 11월 02일
+			</span>
+			</a>				
+			</li>
+
+			<li><a href="question/detail/2">물건이 파손(분실)되면 어떻게 해야 하죠?
+			<span>
+			22년 11월 19일
+			</span>
+			</a>				
+			</li>
+
+			<li><a href="question/detail/3">택배서비스를 이용한 현금영수증은 발급이 가능한가요?
+			<span>
+			22년 10월 28일
+			</span>
+			</a>				
+			</li>
+			
+		</ul>
+		<a href="question/list"><button type="button">전체보기</button></a>
 	</div>
 </body>
 </html>

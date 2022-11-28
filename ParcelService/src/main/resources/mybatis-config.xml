@@ -11,6 +11,7 @@
 		<typeAlias type="kr.ac.kopo.parcelservice.model.Product" alias="Product" />
 		<typeAlias type="kr.ac.kopo.parcelservice.model.Sender" alias="Sender" />
 		<typeAlias type="kr.ac.kopo.parcelservice.model.Notice" alias="Notice" />
+		<typeAlias type="kr.ac.kopo.parcelservice.model.Question" alias="Question" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/parcel.xml" />
@@ -18,5 +19,6 @@
 		<mapper resource="mybatis/product.xml" />
 		<mapper resource="mybatis/sender.xml" />
 		<mapper resource="mybatis/notice.xml" />
+		<mapper resource="mybatis/question.xml" />
 	</mappers>
 </configuration>

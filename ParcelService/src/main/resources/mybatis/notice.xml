@@ -27,6 +27,12 @@
 		SET title=#{title}, reg_date=#{regDate}, contents=#{contents}
 		WHERE id=#{id}
 	</update>
+
+	<update id="update2">
+		UPDATE notice
+		SET view=view + 1
+		WHERE id=#{id}
+	</update>
 	
 	<delete id="delete">
 		DELETE FROM notice

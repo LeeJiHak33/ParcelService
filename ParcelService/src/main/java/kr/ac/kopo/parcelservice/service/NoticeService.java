@@ -16,5 +16,7 @@ public interface NoticeService {
 
 	List<Notice> list();
 
+	void view(int id);
+
 
 }

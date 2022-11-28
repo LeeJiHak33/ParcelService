@@ -5,47 +5,45 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.ac.kopo.parcelservice.dao.NoticeDao;
-import kr.ac.kopo.parcelservice.model.Notice;
+import kr.ac.kopo.parcelservice.dao.QuestionDao;
+import kr.ac.kopo.parcelservice.model.Question;
 
 @Service
-public class NoticeServiceImpl implements NoticeService {
+public class QuestionServiceImpl implements QuestionService {
 	
 	@Autowired
-	NoticeDao dao;
+	QuestionDao dao;
 
+	@Override
+	public List<Question> list() {
+		return dao.list();
+	}
 
 	@Override
 	public void delete(int id) {
 		dao.delete(id);
-		
 	}
 
 	@Override
-	public void add(Notice item) {
+	public void add(Question item) {
 		dao.add(item);
-		
 	}
 
 	@Override
-	public Notice item(int id) {
+	public Question item(int id) {
 		return dao.item(id);
 	}
 
 	@Override
-	public void update(Notice item) {
+	public void update(Question item) {
 		dao.update(item);
-		
-	}
 
-	@Override
-	public List<Notice> list() {
-		return dao.list();
 	}
 
 	@Override
 	public void view(int id) {
 		dao.view(id);
+
 	}
 
 }

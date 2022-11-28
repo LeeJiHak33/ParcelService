@@ -17,4 +17,6 @@ public interface NoticeDao {
 
 	List<Notice> list();
 
+	void view(int id);
+
 }

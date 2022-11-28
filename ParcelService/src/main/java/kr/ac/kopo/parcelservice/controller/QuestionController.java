@@ -10,21 +10,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.ac.kopo.parcelservice.model.Notice;
-import kr.ac.kopo.parcelservice.service.NoticeService;
-
+import kr.ac.kopo.parcelservice.model.Question;
+import kr.ac.kopo.parcelservice.service.QuestionService;
 
 @Controller
-@RequestMapping("/notice")
-public class NoticeController {
-	final String path = "notice/";
+@RequestMapping("/question")
+public class QuestionController {
+	final String path = "question/";
 	
 	@Autowired
-	NoticeService service;
+	QuestionService service;
 	
 	@GetMapping("/list")
 	public String list(Model model) {
-		List<Notice> list = service.list();
+		List<Question> list = service.list();
 
 		model.addAttribute("list", list);
 
@@ -44,7 +43,7 @@ public class NoticeController {
 	}
 	
 	@PostMapping("/add")
-	public String add(Notice item) {
+	public String add(Question item) {
 		service.add(item);
 		
 		return "redirect:list";
@@ -52,7 +51,7 @@ public class NoticeController {
 	
 	@GetMapping("/update/{id}")
 	public String update(@PathVariable int id, Model model) {
-		Notice item = service.item(id);
+		Question item = service.item(id);
 		
 		model.addAttribute("item", item);
 		
@@ -60,7 +59,7 @@ public class NoticeController {
 	}
 	
 	@PostMapping("/update/{id}")
-	public String update(@PathVariable int id, Notice item) {
+	public String update(@PathVariable int id, Question item) {
 		item.setId(id);
 		service.update(item);
 		
@@ -68,7 +67,7 @@ public class NoticeController {
 	}
 	@RequestMapping("/detail/{id}")
 	public String detail(@PathVariable int id, Model model) {
-		Notice item = service.item(id);
+		Question item = service.item(id);
 		
 		service.view(id);
 		

@@ -44,5 +44,10 @@ public class NoticeDaoImpl implements NoticeDao {
 		return sql.selectList("notice.list");
 	}
 
+	@Override
+	public void view(int id) {
+		sql.update("notice.update2", id);
+	}
+
 
 }
