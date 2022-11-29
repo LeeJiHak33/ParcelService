@@ -7,6 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>상품 추가</title>
+<style>
+a {
+	text-decoration-line: none;
+}
+</style>
 </head>
 <body>
 	<div>

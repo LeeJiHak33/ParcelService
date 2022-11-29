@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8 "
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -9,25 +9,86 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <title>택배 서비스</title> 
 <style>
+*{
+	margin:0;
+	padding:0;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+.back {
+	background-image: url("../resources/images/bg_header_enterprise.png");
+	height: 528px;
+	background-size: 100%;
+
+}
 .logo {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
 	text-align: left;
+	
 }
 
 .login {
 	position: relative;
-	top: -50px;
 	padding-bottom: 50px;
 	text-align: right;
 }
 
 .center {
-	clear: both;
-	text-align: center;
+	background: #fff;
+    padding: 30px 59px;
+    border-radius: 50px;
+    overflow: hidden;
+    clear: both;
+    width: 800px;
+    z-index: 55;
+    margin-top: 0;
+    box-sizing: border-box;
+	margin-left: 370px;
+	
+}
+.tit {
+	background-image: url("../resources/images/ico_headerSearch_01.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	claer: both;
+	font-family: 'Pretendard-Regular';
+	font-weight: 800;
+	font-size: 24px;
+    line-height: 38px;
+    padding-left: 60px;
+    padding-right: 35px;
+    position: absolute;
+    left: 440px;
+    top: 135px;
+   
+}
+.search {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	margin-left:220px;
+    border-left: 1px solid #ddd;
+    width: 350px;
+	text-align: right;
+}
+.butn {
+	size : 30px;
+    border: none;
+    background-color: #fff;
+}
+
+a {
+	text-decoration-line: none;
 }
 </style>
 
 </head>
 <body>
+<div class="back">
 	<h1 class="logo">
 		<a href="/">택배 배송 조회</a>
 	</h1>
@@ -49,12 +110,16 @@
 	</div>
 
 	<div class="center">
+		<div class="tit">택배조회</div>
+		<div class="search">
 		<form action="parcel/list" class="id_form">
-			<label>운송장 번호를 입력하세요</label> <input type="number" name="id"
-				style="width: 230px" maxlength="10"
-				placeholder="'-'를 제외한 10자리를 입력해 주세요"> <a href="parcel/list"><button>검색</button></a>
+				<input type="number" name="id"
+				style="width: 230px; border: none; background: transparent;" maxlength="10"
+				placeholder="'-'를 제외한 10자리를 입력해 주세요"> <a href="parcel/list"><button class="butn"><img style="margin-left: 20px; position: absolute; right: 400px; top: 138px;" height="30px" src="../resources/images/btn_headerSearch.png "></button></a>
 		</form>
+		</div>
 	</div>
+</div>
 	<div>
 		<a href="product/list"><button type="button">상품목록</button></a> 
 		<a href="sender/list"><button type="button">발송자목록</button></a> 		

@@ -7,6 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>공지사항 변경</title>
+<style>
+a {
+	text-decoration-line: none;
+}
+</style>
 </head>
 <body>
 	<form method="post">
