@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <title>택배 서비스</title> 
 <style>
 *{
@@ -23,19 +25,23 @@
 	background-image: url("../resources/images/bg_header_enterprise.png");
 	height: 528px;
 	background-size: 100%;
+	background-repeat: no-repeat;
 
+}
+.welcome {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	color: #fff;
+	position:absolute; 
+	right: 100px; 
+	top: 26px;
+	
 }
 .logo {
 	font-family: 'Pretendard-Regular';
 	font-weight: 600;
 	text-align: left;
 	
-}
-
-.login {
-	position: relative;
-	padding-bottom: 50px;
-	text-align: right;
 }
 
 .center {
@@ -46,7 +52,7 @@
     clear: both;
     width: 800px;
     z-index: 55;
-    margin-top: 0;
+    margin-top: 90px;
     box-sizing: border-box;
 	margin-left: 370px;
 	
@@ -64,7 +70,7 @@
     padding-right: 35px;
     position: absolute;
     left: 440px;
-    top: 135px;
+    top: 217px;
    
 }
 .search {
@@ -80,31 +86,68 @@
     border: none;
     background-color: #fff;
 }
+input {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	font-size: 15px;
+}
 
 a {
 	text-decoration-line: none;
 }
+
+nav li {
+	font-family: 'Pretendard-Regular';
+	font-weight: 400;
+	font-size : 20px;
+	color: #fff; 
+	display: inline-block;
+	padding: 30px;
+	position:relative;
+	left: 300px;
+	
+}
+
+button {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background: none;
+}
+
 </style>
 
 </head>
 <body>
 <div class="back">
 	<h1 class="logo">
-		<a href="/">택배 배송 조회</a>
+		<a href="/"><img style="width: 105px; height: 75px; position:absolute; right: 1370px; top: 10px;" src="../resources/images/logo.png"></a>
 	</h1>
+	<nav class="menu">
+		<ul>
+			<li>회사소개</li>
+			<li>개인택배</li>
+			<li>택배예약</li>
+			<li>고객센터</li>
+		</ul>
+	</nav>
 	<div class="login">
 		<c:if test="${sessionScope.member == null}">
 			<div>
-				<a href="login"><button type="button">로그인</button></a><a
-					href="signup"><button type="button">회원가입</button></a>
-			</div>
+				<a href="login"><button type="button"><img style="width: 35px; height: 35px; position: absolute; right: 100px; top: 26px;" src="../resources/images/login.png"></button></a>
+				<a href="signup"><button type="button"><img style="width: 35px; height: 35px; position: absolute; right: 50px; top: 26px;" src="../resources/images/1signup.png"></button></a>
+			</div> 
 		</c:if>
 		<c:if test="${sessionScope.member != null}">
 			<div>
-				<div>
-					어서오세요 ${sessionScope.member.name}님 <a href="logout"><button
-							type="button">로그아웃</button></a>
+				<div class="welcome">
+					어서오세요 ${sessionScope.member.name}님 
 				</div>
+				<div>
+					<a href="logout"><button
+							type="button"><img style="width: 35px; height: 35px; position: absolute; right: 50px; top: 26px;" src="../resources/images/logout.png"></button></a>
+				</div>
+				
 			</div>
 		</c:if>
 	</div>
@@ -114,12 +157,15 @@ a {
 		<div class="search">
 		<form action="parcel/list" class="id_form">
 				<input type="number" name="id"
-				style="width: 230px; border: none; background: transparent;" maxlength="10"
-				placeholder="'-'를 제외한 10자리를 입력해 주세요"> <a href="parcel/list"><button class="butn"><img style="margin-left: 20px; position: absolute; right: 400px; top: 138px;" height="30px" src="../resources/images/btn_headerSearch.png "></button></a>
+				style="width: 230px; border: none; background: transparent; box-shadow: none;" maxlength="10"
+				placeholder="'-'를 제외한 10자리를 입력해 주세요"> <a href="parcel/list"><button class="butn"><img style="margin-left: 20px; position: absolute; right: 400px; top: 222px;" height="30px" src="../resources/images/btn_headerSearch.png "></button></a>
 		</form>
 		</div>
 	</div>
 </div>
+	<div>
+		<img style="width:100%;"  src="../resources/images/quickmenu.png">	
+	</div>
 	<div>
 		<a href="product/list"><button type="button">상품목록</button></a> 
 		<a href="sender/list"><button type="button">발송자목록</button></a> 		
