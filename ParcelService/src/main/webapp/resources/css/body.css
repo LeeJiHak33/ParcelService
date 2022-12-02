@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+		format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.header {
+	border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+
+.back {
+	/* background-image: url("../resources/images/bg_header_enterprise.png"); */
+	height: 548px;
+	max-height: calc(100% - 548px);
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+
+.welcome {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	color: #fff;
+	position: absolute;
+	right: 100px;
+	top: 32px;
+}
+
+.logo {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	text-align: left;
+}
+
+.center {
+	background: #fff;
+	padding: 30px 59px;
+	border-radius: 50px;
+	overflow: hidden;
+	clear: both;
+	width: 800px;
+	z-index: 55;
+	margin-top: 150px;
+	box-sizing: border-box;
+	margin-left: 370px;
+}
+
+.tit {
+	/* background-image: url('../resources/images/ico_headerSearch_01.png'); */
+	background-position: left center;
+	background-repeat: no-repeat;
+	font-family: 'Pretendard-Regular';
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 38px;
+	padding-left: 60px;
+	padding-right: 35px;
+	position: absolute;
+	left: 440px;
+	top: 277px;
+}
+
+.search {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	margin-left: 240px;
+	border-left: 1px solid #ddd;
+	width: 350px;
+	text-align: right;
+}
+
+.butn {
+	size: 30px;
+	border: none;
+	background-color: #fff;
+}
+
+input {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	font-size: 15px;
+}
+
+a {
+	text-decoration-line: none;
+	color: black;
+}
+
+nav li {
+	font-family: 'Pretendard-Regular';
+	font-weight: 400;
+	font-size: 20px;
+	color: #fff;
+	display: inline-block;
+	padding: 30px;
+	position: relative;
+	left: 300px;
+}
+
+.notice ul {
+	display: flex;
+	flex: 1 1 100%;
+	max-width: calc(100% - 200px);
+	margin: 0 auto;
+	font-family: 'Noto Sans KR', sans-serif;
+	list-style-type: none;
+	position: absolute;
+	left: 400px;
+	top: 740px;
+}
+.allview {
+	height: 400px;
+}
+
+.allview a {
+	font-family: 'Noto Sans KR', sans-serif;
+	position: relative;
+	display: inline-flex;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 34px;
+	border: 1px solid;
+	border-radius: 50px;
+	padding: 0 14px;
+	background-color: transparent;
+	overflow: hidden;
+	z-index: 0;
+	left: 250px;
+	top: 200px;
+}
+
+.ntit {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	position: absolute;
+	left: 250px;
+	top: 750px;
+}
+
+.notice ul li a {
+	position: relative;
+	display: inline-block;
+	width: 220px; font-size : 18px;
+	font-weight: 500;
+	height: 100%;
+	padding: 18px 18px 10px;
+	margin: 20px;
+	border-top: 1px solid;
+	border-color: rgb(255, 128, 0);
+	font-size: 18px;
+}
+
+.notice ul li a span {
+	font-weight: 900;
+}
+
+.questit {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	position: absolute;
+	left: 250px;
+	top: 1100px;
+}
+
+.quesview a {
+	font-family: 'Noto Sans KR', sans-serif;
+	position: absolute;
+	display: inline-flex;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 34px;
+	border: 1px solid;
+	border-radius: 50px;
+	padding: 0 14px;
+	background-color: transparent;
+	overflow: hidden;
+	z-index: 0;
+	left: 1170px;
+	top: 1110px;
+}
+
+.question ul {
+	max-width: calc(100% - 200px);
+	margin: 0 auto;
+	font-family: 'Noto Sans KR', sans-serif;
+	list-style-type: none;
+	font-size: 20px;
+	position: absolute;
+	left: 250px;
+	top: 1200px;
+	display: inline-block;
+	line-height: 2;
+	font-weight: 1;
+}
+
+.question ul li {
+	padding: 20px;
+}
+
+.big {
+	font-weight: 600;
+	width: 458px;
+	height: 33px;
+	border: 1px solid rgb(255, 128, 0);
+	box-shadow: 0px 4px 10px rgb(0 0 0/ 10%);
+	border-radius: 12px;
+	font-size: 28px;
+}
+
+.big a {
+	position: absolute;
+	bottom: 330px;
+}
+.preview {
+	height:730px;
+}
+.preview p {
+	position: relative;
+	left: 790px;
+	top: 142px;
+	font-size: 18px;
+    font-weight: 300;
+    color: gray;
+    line-height: 2;
+    white-space: pre-wrap;
+    max-width: calc(100% - 790px);
+}
+.midtit {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.midp {
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 200;
+	color: gray;
+}
+.middle {
+	text-align: center;
+	margin-top: 50px;
+}
+.bodyrec {
+	height:730px;
+}
+.fot {
+	background-repeat: no-repeat;
+}
