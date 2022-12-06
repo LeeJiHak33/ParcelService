@@ -90,6 +90,14 @@ input {
 	font-size: 15px;
 }
 
+input:focus {
+	outline: none;
+}
+
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
 a {
 	text-decoration-line: none;
 	color: black;
@@ -117,6 +125,7 @@ nav li {
 	left: 400px;
 	top: 740px;
 }
+
 .allview {
 	height: 400px;
 }
@@ -135,7 +144,7 @@ nav li {
 	overflow: hidden;
 	z-index: 0;
 	left: 250px;
-	top: 200px;
+	top: 180px;
 }
 
 .ntit {
@@ -150,11 +159,13 @@ nav li {
 .notice ul li a {
 	position: relative;
 	display: inline-block;
-	width: 220px; font-size : 18px;
+	width: 220px;
+	font-size: 18px;
 	font-weight: 500;
 	height: 100%;
 	padding: 18px 18px 10px;
 	margin: 20px;
+	margin-top: 25px;
 	border-top: 1px solid;
 	border-color: rgb(255, 128, 0);
 	font-size: 18px;
@@ -222,20 +233,23 @@ nav li {
 	position: absolute;
 	bottom: 330px;
 }
+
 .preview {
-	height:730px;
+	height: 730px;
 }
+
 .preview p {
 	position: relative;
 	left: 790px;
-	top: 142px;
+	top: 122px;
 	font-size: 18px;
-    font-weight: 300;
-    color: gray;
-    line-height: 2;
-    white-space: pre-wrap;
-    max-width: calc(100% - 790px);
+	font-weight: 300;
+	color: gray;
+	line-height: 2;
+	white-space: pre-wrap;
+	max-width: calc(100% - 790px);
 }
+
 .midtit {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 35px;
@@ -250,13 +264,44 @@ nav li {
 	font-weight: 200;
 	color: gray;
 }
+
 .middle {
 	text-align: center;
 	margin-top: 50px;
 }
+
 .bodyrec {
-	height:730px;
+	height: 730px;
 }
+
 .fot {
 	background-repeat: no-repeat;
+}
+
+#hidwrap {
+	margin: 0;
+}
+
+.more {
+	font-size: 18x;
+	color: #fff;
+	opacity: 0;
+	transition: 0.5s all
+}
+
+#hidwrap:hover .more {
+	opacity: 1
+}
+
+#hidwrap .more button {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffd34b;
 }

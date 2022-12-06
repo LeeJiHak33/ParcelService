@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+		format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.header {
+	border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+
+.back {
+	/* background-image: url("../resources/images/bg_header_enterprise.png"); */
+	height: 400px;
+	max-height: calc(100% - 548px);
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+
+nav li {
+	font-family: 'Pretendard-Regular';
+	font-weight: 400;
+	font-size: 20px;
+	color: #fff;
+	display: inline-block;
+	padding: 30px;
+	position: relative;
+	left: 300px;
+}
+
+h2 {
+	text-align: center;
+    font-size: 60px;
+    color: #fff;
+    line-height: 90px;
+    font-weight: 700;
+    margin-top: 74px;
+    margin-bottom: 11px;
+}
+.naviBoxWrap {
+    z-index: 10;
+    position: relative;
+    width: 1204px;
+    height: 70px;
+    margin: 0 auto;
+    background: #ffb437;
+    transition: all .3s ease;
+    left: 50%;
+    margin-top: 95px;
+    margin-left: -602px;
+    box-shadow: 7px 18px 22px rgb(0 0 0 / 15%);
+}
+
+.naviBoxWrap p {
+	font-size: 20px;
+    color: #fff;
+    line-height: 70px;
+    font-weight: 700;
+	text-align: left;
+	margin-left: 30px;
+}
+.wrap {
+    width: 1204px;
+    margin: 0 auto;
+    position: relative;
+    padding: 117px 0 0;
+}
+
+table.board.pclist {
+    margin-bottom: 30px;
+    padding-top: 46px;
+}
+
+table.board {
+    width: 100%;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    border-spacing: 0;
+}
+col {
+    display: table-column;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table.board thead th {
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    padding: 29px 0 29px;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody tr {
+	font-size: 15px;
+    text-align: center;
+}
+a {
+	text-decoration-line: none;
+}
+.bbbt {
+	text-align: center;
+}

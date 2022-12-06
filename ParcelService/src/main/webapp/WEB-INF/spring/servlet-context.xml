@@ -20,6 +20,22 @@
 	<resources location="/resources/js/" mapping="/js/**"></resources>
 	<resources location="/resources/css/" mapping="/css/**"></resources>
 	<resources location="/resources/html/" mapping="/html/**"></resources>
+	<resources mapping="/notice/resources/**" location="/resources/" />
+	<resources location="/notice/resources/js/" mapping="/js/**"></resources>
+	<resources location="/notice/resources/css/" mapping="/css/**"></resources>
+	<resources location="/notice/resources/html/" mapping="/html/**"></resources>
+	<resources mapping="/question/resources/**" location="/resources/" />
+	<resources location="/question/resources/js/" mapping="/js/**"></resources>
+	<resources location="/question/resources/css/" mapping="/css/**"></resources>
+	<resources location="/question/resources/html/" mapping="/html/**"></resources>
+	<resources mapping="/product/resources/**" location="/resources/" />
+	<resources location="/product/resources/js/" mapping="/js/**"></resources>
+	<resources location="/product/resources/css/" mapping="/css/**"></resources>
+	<resources location="/product/resources/html/" mapping="/html/**"></resources>
+	<resources mapping="/sender/resources/**" location="/resources/" />
+	<resources location="/sender/resources/js/" mapping="/js/**"></resources>
+	<resources location="/sender/resources/css/" mapping="/css/**"></resources>
+	<resources location="/sender/resources/html/" mapping="/html/**"></resources>
 	<resources mapping="/assets/**" location="/resources/assets/" />
 	<resources mapping="/ad_assets/**" location="/resources/ad_assets/" />
 

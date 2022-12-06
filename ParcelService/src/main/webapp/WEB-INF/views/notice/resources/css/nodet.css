@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+		format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.header {
+	border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+
+.back {
+	/* background-image: url("../resources/images/bg_header_enterprise.png"); */
+	height: 400px;
+	max-height: calc(100% - 548px);
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+
+nav li {
+	font-family: 'Pretendard-Regular';
+	font-weight: 400;
+	font-size: 20px;
+	color: #fff;
+	display: inline-block;
+	padding: 30px;
+	position: relative;
+	left: 300px;
+}
+h2 {
+	text-align: center;
+    font-size: 60px;
+    color: #fff;
+    line-height: 90px;
+    font-weight: 700;
+    margin-top: 74px;
+    margin-bottom: 11px;
+}
+
+.naviBoxWrap {
+    z-index: 10;
+    position: relative;
+    width: 1204px;
+    height: 70px;
+    margin: 0 auto;
+    background: #ffd34b;
+    transition: all .3s ease;
+    left: 50%;
+    margin-top: 95px;
+    margin-left: -602px;
+    box-shadow: 7px 18px 22px rgb(0 0 0 / 15%);
+}
+
+.naviBoxWrap p {
+	font-size: 20px;
+    color: #fff;
+    line-height: 70px;
+    font-weight: 700;
+	text-align: left;
+	margin-left: 30px;
+}
+.viewbox {
+    width: 1204px;
+    position: relative;
+    margin: 0 auto;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 25px;
+    margin-top: 100px;
+}
+.viewbox .viewtit {
+    font-size: 32px;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+    padding: 37px 30px;
+}
+
+.viewbox .viewtit span {
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    color: #999;
+    line-height: 32px;
+}
+
+.viewbox .viewtxt {
+	padding: 60px 30px;
+    font-size: 18px;
+    color: #666;
+    font-weight: 350;
+    line-height: 28px;
+    border-bottom: 1px solid #ddd;
+    flex: 0 0 auto;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.butn a{
+	text-decoration-line: none;
+}
+
+.butn button {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    height: 40px;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 3px;
+    gap: 20px;
+    border: none;
+    background-color: #ffd34b;
+    position: relative;
+    left: 1135px;
+    bottom: 20px;
+}

@@ -14,7 +14,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" href="../resources/css/body.css" type="text/css">
+<link rel="stylesheet" href="../resources/css/body1.css?after" type="text/css">
 <title>택배 서비스</title>
 <style>
 </style>
@@ -89,11 +89,7 @@
 	<div>
 		<img style="width:100%;" src="../resources/images/quickmenu2.png">
 	</div>
-	<!--  <div>
-		<a href="product/list"><button type="button">상품목록</button></a> 
-		<a href="sender/list"><button type="button">발송자목록</button></a> 		
-	</div> -->
-
+	
 	<div class="ntit">
 		<h2>공지사항</h2>
 	</div>
@@ -128,9 +124,9 @@
 			<li><a href="question/detail/3">택배서비스를 이용한 현금영수증은 발급이 가능한가요?
 			</a></li>
 
-			<li><a href="question/detail/3">홈페이지 접속 장애/오류시 해결방법 </a></li>
+			<li><a href="question/detail/4">홈페이지 접속 장애/오류시 해결방법 </a></li>
 
-			<li><a href="question/detail/3">배달예정일이 지났는데 택배를 못 받았습니다. </a></li>
+			<li><a href="question/detail/5">배달예정일이 지났는데 택배를 못 받았습니다. </a></li>
 
 		</ul>
 	</div>
@@ -148,16 +144,24 @@
 		<a href="question/list">전체보기</a>
 	</div>
 	<div class="bodyrec">
-	<div class="midtit">
+		<div class="midtit">
 			<h2>택배 서비스 안내</h2>			
-	</div>
-	<div class="midp">
+		</div>
+		<div class="midp">
 			<p>쉽고 빠른 택배 서비스를<br>지금 만나 보세요</p>
+		</div>
+		<div class="middle">
+			<img src="../resources/images/1meett.png">
+		</div>
 	</div>
-	<div class="middle">
-		<img src="../resources/images/1meett.png">
+	
+	<div id="hidwrap">
+		<div class="more">
+		<a href="product/list"><button type="button">상품목록</button></a> 
+		<a href="sender/list"><button type="button">발송자목록</button></a>
+		</div> 		
 	</div>
-	</div>
+	
 	<div class="fot">
 		<img style="width: 100%; position: relative; top:4px;" src="../resources/images/footer.png">
 	</div>
