@@ -132,3 +132,11 @@ a {
 .bbbt {
 	text-align: center;
 }
+.welcome {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	color: #fff;
+	position: absolute;
+	right: 100px;
+	top: 32px;
+}

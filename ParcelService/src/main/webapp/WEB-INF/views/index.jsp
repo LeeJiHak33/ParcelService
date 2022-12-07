@@ -14,7 +14,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" href="../resources/css/body1.css?after" type="text/css">
+<link rel="stylesheet" href="../resources/css/body1.css" type="text/css">
 <title>택배 서비스</title>
 <style>
 </style>

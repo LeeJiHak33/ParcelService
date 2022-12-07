@@ -16,7 +16,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" href="../resources/css/parcellist2.css" type="text/css">
+<link rel="stylesheet" href="../resources/css/parcellist2.css?after" type="text/css">
 <title>배송리스트</title>
 <style>
 </style>

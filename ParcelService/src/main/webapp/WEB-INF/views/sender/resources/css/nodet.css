@@ -127,3 +127,11 @@ h2 {
     left: 1135px;
     bottom: 20px;
 }
+.welcome {
+	font-family: 'Pretendard-Regular';
+	font-weight: 600;
+	color: #fff;
+	position: absolute;
+	right: 100px;
+	top: 32px;
+}
